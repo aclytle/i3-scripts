@@ -83,10 +83,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+i split h
@@ -115,29 +115,33 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1:Web
-bindsym $mod+2 workspace 2:Term
-bindsym $mod+3 workspace 3:Term
-bindsym $mod+4 workspace 4:IDE
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6:Web
-bindsym $mod+7 workspace 7:Term
-bindsym $mod+8 workspace 8:Term
-bindsym $mod+9 workspace 9:IDE
-bindsym $mod+0 workspace 10
+bindsym $mod+1 exec $HOME/.i3/workspacer.py lateral 1
+bindsym $mod+2 exec $HOME/.i3/workspacer.py lateral 2
+bindsym $mod+3 exec $HOME/.i3/workspacer.py lateral 3
+bindsym $mod+4 exec $HOME/.i3/workspacer.py lateral 4
+bindsym $mod+5 exec $HOME/.i3/workspacer.py lateral 5
+bindsym $mod+6 exec $HOME/.i3/workspacer.py lateral 6
+bindsym $mod+7 exec $HOME/.i3/workspacer.py lateral 7
+bindsym $mod+8 exec $HOME/.i3/workspacer.py lateral 8
+bindsym $mod+9 exec $HOME/.i3/workspacer.py lateral 9
+bindsym $mod+0 exec $HOME/.i3/workspacer.py lateral 0
+bindsym $mod+Up exec $HOME/.i3/workspacer.py up
+bindsym $mod+Down exec $HOME/.i3/workspacer.py down
 bindsym $mod+minus scratchpad show
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:Web
-bindsym $mod+Shift+2 move container to workspace 2:Term
-bindsym $mod+Shift+3 move container to workspace 3:Term
-bindsym $mod+Shift+4 move container to workspace 4:IDE
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6:Web
-bindsym $mod+Shift+7 move container to workspace 7:Term
-bindsym $mod+Shift+8 move container to workspace 8:Term
-bindsym $mod+Shift+9 move container to workspace 9:IDE
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 exec $HOME/.i3/workspacer.py mlateral 1
+bindsym $mod+Shift+2 exec $HOME/.i3/workspacer.py mlateral 2
+bindsym $mod+Shift+3 exec $HOME/.i3/workspacer.py mlateral 3
+bindsym $mod+Shift+4 exec $HOME/.i3/workspacer.py mlateral 4
+bindsym $mod+Shift+5 exec $HOME/.i3/workspacer.py mlateral 5
+bindsym $mod+Shift+6 exec $HOME/.i3/workspacer.py mlateral 6
+bindsym $mod+Shift+7 exec $HOME/.i3/workspacer.py mlateral 7
+bindsym $mod+Shift+8 exec $HOME/.i3/workspacer.py mlateral 8
+bindsym $mod+Shift+9 exec $HOME/.i3/workspacer.py mlateral 9
+bindsym $mod+Shift+0 exec $HOME/.i3/workspacer.py mlateral 0
+bindsym $mod+Shift+Up exec $HOME/.i3/workspacer.py mup
+bindsym $mod++Shift+Down exec $HOME/.i3/workspacer.py mdown
 bindsym $mod+shift+minus move scratchpad
 
 # Switch hosts file to work/procrastinate mode
