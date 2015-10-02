@@ -3,6 +3,7 @@
 from i3ipc import Connection
 from sys import argv
 
+MAX_WORKSPACES = 40
 wdict = {}
 
 def get_current_workspace_num(con, **kwargs):
@@ -22,7 +23,7 @@ def get_workspace_names(con, **kwargs):
 
 def move_window_up(con, **kwargs):
     wdict = get_workspace_names(con)
-    newnum = (get_current_workspace_num(con) + 10) % 40
+    newnum = (get_current_workspace_num(con) + 10) % MAX_WORKSPACES
     if newnum in wdict:
         newname = wdict[newnum]
     else:
@@ -31,7 +32,7 @@ def move_window_up(con, **kwargs):
 
 def move_window_down(con, **kwargs):
     wdict = get_workspace_names(con)
-    newnum = (get_current_workspace_num(con) - 10) % 40
+    newnum = (get_current_workspace_num(con) - 10) % MAX_WORKSPACES
     if newnum in wdict:
         newname = wdict[newnum]
     else:
@@ -40,7 +41,7 @@ def move_window_down(con, **kwargs):
 
 def switch_up(con, **kwargs):
     wdict = get_workspace_names(con)
-    newnum = (get_current_workspace_num(con) + 10) % 40 
+    newnum = (get_current_workspace_num(con) + 10) % MAX_WORKSPACES 
     if newnum in wdict:
         newname = wdict[newnum]
     else:
@@ -49,7 +50,7 @@ def switch_up(con, **kwargs):
 
 def switch_down(con, **kwargs):
     wdict = get_workspace_names(con)
-    newnum = (get_current_workspace_num(con) - 10) % 40
+    newnum = (get_current_workspace_num(con) - 10) % MAX_WORKSPACES
     if newnum in wdict:
         newname = wdict[newnum]
     else:
