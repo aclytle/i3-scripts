@@ -211,9 +211,20 @@ bindsym $mod+y exec --no-startup-id $HOME/.i3/renamer.py
 bar {
         #status_command $HOME/time.sh
         #status_command i3status
+        id bar-1
         status_command $HOME/statusbar.sh
         wheel_up_cmd nop
         wheel_down_cmd nop
+        workspace_buttons no
+}
+
+bar {
+        id bar-0
+        position top
+        tray_output none
+        wheel_up_cmd nop
+        wheel_down_cmd nop
+
 }
 
 # Set the background
