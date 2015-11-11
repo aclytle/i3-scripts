@@ -144,8 +144,8 @@ bindsym $mod++Shift+Down exec $HOME/.i3/workspacer.py mdown
 bindsym $mod+shift+minus move scratchpad
 
 # Switch hosts file to work/procrastinate mode
-bindsym $mod+Shift+bracketleft exec "i3-nagbar -t warning -m 'Switching to procrastinate mode. Are you sure?' -b 'yes' 'cd ~/hostsgit/ ; git checkout procrastinate ; cp hosts /etc/hosts'
-bindsym $mod+Shift+bracketright exec "cd ~/hostsgit/ ; git checkout work ; cp hosts /etc/hosts ; i3-nagbar -t warning -m 'Switched to work mode.'"
+#bindsym $mod+Shift+bracketleft exec "i3-nagbar -t warning -m 'Switching to procrastinate mode. Are you sure?' -b 'yes' 'cd ~/hostsgit/ ; git checkout procrastinate ; cp hosts /etc/hosts'
+#bindsym $mod+Shift+bracketright exec "cd ~/hostsgit/ ; git checkout work ; cp hosts /etc/hosts ; i3-nagbar -t warning -m 'Switched to work mode.'"
 # reload the configuration file
 bindsym $mod+Shift+x reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -198,8 +198,8 @@ bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 3 -- -5%"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 3 +5%"
 
 # VLC Keybindings
-bindsym $mod+Shift+p exec --no-startup-id $HOME/vlc_control.sh stop
-bindsym $mod+Shift+o exec --no-startup-id $HOME/vlc_control.sh play
+#bindsym $mod+Shift+p exec --no-startup-id $HOME/vlc_control.sh stop
+#bindsym $mod+Shift+o exec --no-startup-id $HOME/vlc_control.sh play
 
 # xcmenuctrl keybind
 bindsym $mod+u exec --no-startup-id xcmenuctrl
