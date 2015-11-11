@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 from i3ipc import Connection
 from workspacer import get_current_workspace_num, get_workspace_names
