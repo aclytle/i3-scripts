@@ -25,7 +25,9 @@ workspace_auto_back_and_forth yes
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--20-200-75-75-C-100-iso10646-1
+font -misc-dejavu sans mono-*-*-*-*-*-*-*_*-*-*-iso10646-*
+#font -misc-droid sans mono-*-*-*-*-*-*-*_*-*-*-iso10646-*
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
@@ -243,3 +245,6 @@ exec --no-startup-id $HOME/projects/xcmenu/xcmenu
 #
 #Custom Colors 
 client.focused #FF0000 #FF0000 #FFFFFF #00FF00
+
+# notification script
+exec --no-startup-id /home/alytle/projects/notify_server/subscriber.py
